@@ -1,0 +1,127 @@
+/* Reset */
+*, *::before, *::after{
+    box-sizing: border-box
+}
+
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: -apple-system,BlinkMacSystemFont,"Noto Sans CJK TC","Microsoft JhengHei UI","Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    color: white;
+    background: black;
+}
+
+ul, li{
+    list-style-type: none;
+    padding: 0
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+/* Utilitys */
+
+.col-span-3 {
+    grid-column:span 3/span 3;
+   }
+
+/* Components */
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Main */
+.hero{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    overflow: hidden;
+}
+
+.hero__video{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (min-width: 1000px){
+    .hero__video{
+        width: 100%;
+    }
+}
+.social{
+    position: relative;
+    z-index: 1;
+    margin-top: -4rem;
+}
+
+.social__list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    background: white;
+
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 1rem;
+}
+@media screen and (min-width: 1000px){
+    .social__list{
+
+        margin: 0;
+    }
+}
+
+.social__item{
+    display: block;
+    background: white;
+    border-radius: 5px;
+}
+
+.social__item:nth-last-of-type(1){
+    border: 0;
+}
+
+.social__link{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: black;
+    transition: background .3s;
+}
+
+.social__link:hover{
+    background: lightgray;
+}
+
+.about__paragraph{
+    font-size: 1.5rem;
+    padding: 6rem 1rem;
+}
+@media screen and (min-width: 1000px){
+    .about__paragraph{
+        font-size: 2rem;
+    }
+}
+
+.footer{
+    padding: 2rem 0;
+    text-align: center;
+}
